@@ -1,0 +1,210 @@
+.<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Bonjuteri-Ürün Detayı</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+      button {
+      background: linear-gradient(to right, #ff9800, #f44336);
+      border: none;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    button:active {
+        transform: scale(0.95);
+    }
+
+    .secim {
+        background: #ccc;
+        color: #333;
+    }
+
+    .secim.aktif {
+        background: #ff9800;
+        color: white;
+        font-weight: bold;
+    }
+    .footer {
+      margin: 40px 20px 20px;
+      padding: 30px;
+      background-color: #f0f0f0;
+      color: #222; 
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-section label {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    .footer-section a {
+      text-decoration: none;
+      color: black;
+      margin: 4px 0;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #ffffff;
+      transform: translateX(5px);
+    }
+
+    .footer-section p {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+            .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #f0f0f0; 
+        padding: 20px 40px;
+        color: #222;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        font-family: 'Segoe UI', sans-serif;
+        border-radius: 0 0 12px 12px;
+        flex-wrap: wrap;
+      }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffd700;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      margin: 0;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .menu a:hover {
+      color: #fff;
+      transform: translateY(-2px);
+    }
+
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <h1>Bonjuteri</h1>
+    <nav class="menu">
+      <a href="index.html">Anasayfa</a>
+      <a href="index.html">Tüm Ürünler</a>
+      <a href="#">Hakkımızda</a>
+      <a href="#">İletişim</a>
+    </nav>
+  </header>
+  <hr>
+
+  <div style="margin-top: 20px; margin-bottom: 20px; text-align: center;" class="urun-detay">
+    <img id="urunResim" src="resimler/kuyumcu3.webp" alt="Ürün">
+    <div class="bilgiler">
+      <h2 id="urunIsim"> 14 Ayar Altın Kaplama 100 Dilde Seni seviyorum Kolye</h2>
+      <p id="urunFiyat">Normal fiyat: <s>649.99TL</s> İndirimli fiyat: 499.99TL</p>
+      <label class="secenek">Seçenekler:</label><br>
+      <button>Standart Kutu</button>
+      <button>Premium Kutu (+50₺)</button>
+      <button>Güllü Kutu (+350₺)</button><br>
+      <label class="secenek label">Renk seçimi:</label><br>
+      <button class="secim aktif">Altın Kaplama</button>
+      <button class="secim">Gümüş Kaplama</button>
+      <div class="secenek">
+        <label>Adet</label><br>
+        <div class="adet-kontrol">
+          <button>-</button>
+          <span>1</span>
+          <button>+</button>
+        </div>
+      </div>
+      <button class="odeme-btn banka-btn">Banka - Kredi Kartı ile Satın al</button><br>
+      <button class="odeme-btn kapida-btn">🛍️ Kapıda Ödeme ile Satın Al</button>
+    </div>  
+  </div>
+  <hr>
+
+  <footer class="footer" style="margin: 20px; display: flex; justify-content: space-between; ">
+    <div class="footer-section">
+      <p>Bonjuteri &copy; 2025</p>
+      <p>Tüm hakları saklıdır.</p>
+    </div>
+    <div class="footer-section" style="display: flex; flex-direction: column;">
+      <label for="iletisim">İletişim</label>
+      <a href="#">contact@bonjuteri.com</a>
+    </div>
+    <div class="footer-section" style="display: flex; flex-direction: column;">
+      <label for="sosyal-medya">Sosyal Medya</label>
+      <a href="#">Instagram</a>
+      <a href="#">Facebook</a>
+      <a href="#">Twitter</a>
+      <a href="#">LinkedIn</a>
+    </div>
+    <div class="footer-section" style="display: flex; flex-direction: column;">
+      <label for="hizmetler">Hizmetler</label>
+      <a href="#">Ürün İade</a>
+      <a href="#">Garanti</a>
+      <a href="#">Sıkça Sorulan Sorular</a>
+    </div>
+
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const footer = document.querySelector(".footer");
+      footer.style.opacity = 0;
+      footer.style.transition = "opacity 1.5s ease";
+      setTimeout(() => {
+        footer.style.opacity = 1;
+      }, 200);
+    });
+
+    window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 20) {
+      navbar.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.6)";
+    } else {
+      navbar.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.4)";
+    }
+  });
+
+  </script>
+
+  <script src="urun.js"></script>
+</body>
+</html>
